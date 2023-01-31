@@ -43,7 +43,7 @@ const loginFormHandler = async (event) => {
 
   if (email && password) {
     // Send the e-mail and password to the server
-    const response = await fetch("/api/dashboard", {
+    const response = await fetch("/api/users/login", {
       method: "POST",
       body: JSON.stringify({ email, password }),
       headers: { "Content-Type": "application/json" },
@@ -52,6 +52,7 @@ const loginFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace("/dashboard");
     } else {
+      console.log(err)
       alert("Failed to log in");
     }
   }
@@ -71,7 +72,7 @@ const registerFormHandler = async (event) => {
 
   if (username && email && password) {
     // Send the e-mail and password to the server
-    const response = await fetch("/api/user/signup", {
+    const response = await fetch("/api/users/signup", {
       method: "POST",
       body: JSON.stringify({ username, email, password }),
       headers: { "Content-Type": "application/json" },
@@ -80,7 +81,8 @@ const registerFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace("/dashboard");
     } else {
-      alert("Failed to log in");
+      alert("Failed to log in")
+      console.log(err);
     }
   }
 };
@@ -89,5 +91,4 @@ document
   .querySelector("div.input-field input[name='signupBtn']")
   .addEventListener("click", registerFormHandler);
 
-// add js to grab value of each one
-// then post to api/newitem/post input value in body
+  

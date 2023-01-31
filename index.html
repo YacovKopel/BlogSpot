@@ -11,7 +11,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="public/style.css">
 
 </head>
 <header>
@@ -26,121 +26,27 @@
 </header>
 
 <body>
-    <section class="login">
-        <div class="container p-3">
-          <div class="forms">
-            <div class="form login">
-              <span class="title">Login</span>
-      
-              <form action="#">
-                <div class="input-field">
-                  <input
-                    type="text"
-                    id="email-login"
-                    placeholder="Enter your email"
-                    required
-                  />
-                  <i class="uil uil-envelope icon"></i>
-                </div>
-                <div class="input-field">
-                  <input
-                    type="password"
-                    class="password"
-                    id="password-login"
-                    placeholder="Enter your password"
-                    required
-                  />
-                  <i class="uil uil-lock icon"></i>
-                  <i class="uil uil-eye-slash showHidePw"></i>
-                </div>
-      
-                <div class="input-field button">
-                  <input name="loginBtn" type="button" value="Login" />
-                </div>
-              </form>
-      
-              <div class="login-signup">
-                <span class="text">Not a member?
-                  <a href="#" class="text signup-link">Signup Now</a>
-                </span>
-              </div>
-            </div>
-      
-            <!-- Registration Form -->
-            <div class="form signup">
-              <span class="title">Registration</span>
-      
-              <form action="#">
-                <div class="input-field">
-                  <input
-                    type="text"
-                    id="signUpName"
-                    placeholder="Enter Username"
-                    required
-                  />
-                  <i class="uil uil-user"></i>
-                </div>
-                <div class="input-field">
-                  <input
-                    type="text"
-                    id="signUpEmail"
-                    placeholder="Enter your email"
-                    required
-                  />
-                  <i class="uil uil-envelope icon"></i>
-                </div>
-                <div class="input-field">
-                  <input
-                    type="password"
-                    class="password"
-                    id="signUpPassword"
-                    placeholder="Create a password"
-                    required
-                  />
-                  <i class="uil uil-lock icon"></i>
-                </div>
-                <div class="input-field">
-                  <input
-                    type="password"
-                    class="password"
-                    placeholder="Confirm a password"
-                    required
-                  />
-                  <i class="uil uil-lock icon"></i>
-                  <i class="uil uil-eye-slash showHidePw"></i>
-                </div>
-      
-                <div class="input-field button">
-                  <input name="signupBtn" type="button" value="Signup" />
-                </div>
-              </form>
-      
-              <div class="login-signup">
-                <span class="text">Already a member?
-                  <a href="#" class="text login-link">Login Now</a>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <script src="script.js"></script>
 
-    
-    <main>
+   
+     <main>
     <div class="card" style="width: 90%;">
         <div class="card-body p-0 border-dark">
         <div class="postHeader">
-          <h5> <u> Card title</u></h5>
-          <p>Posted by {{username}} on {{date}}
-          </p>
+          <h5> <u> Create New Post</u></h5>
         </div>
-          <p class="card-text p-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <div class="content">
+          <h4><u>Title:</u></h4>
+          <input type="text">
+          <h4><u>Content:</u></h4>
+          <input type="text">
+        <button class="btn btn-primary">Submit</button>
+        </div>
         </div>
       </div>
      
     </main>
+    <button class="newPostbtn">Add New Post</button>
+    <script src="public/addPost.js"></script>
 
       <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -152,6 +58,6 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-    <script src="script.js"></script>
+    <script src="/public/script.js"></script>
   </body>
 </html>

@@ -201,3 +201,35 @@ main{
     margin-top: 30px;
     text-align: center;
   }
+
+  button.newPostbtn {
+    background: red;
+    color: #fff;
+  }
+  
+  button.newPostbtn:hover{
+    background: rgba(240, 101,36);
+    color: #fff;
+  }
+  .newPostbtn{
+    width: 20%;
+    height: 50px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 40%;
+  }
+  
+  .content{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .content input{
+    margin-bottom: 10px;
+  }

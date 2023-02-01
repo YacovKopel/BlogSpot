@@ -7,7 +7,7 @@ const newpost = async (event) => {
 
   if (title && content) {
     // Send the e-mail and password to the server
-    const response = await fetch("/api/post/", {
+    const response = await fetch("/api/post", {
       method: "POST",
       body: JSON.stringify({ title, content}),
       headers: { "Content-Type": "application/json" },

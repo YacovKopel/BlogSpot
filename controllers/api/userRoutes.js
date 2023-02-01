@@ -3,7 +3,7 @@ const { User } = require('../../models');
 const withAuth = require('../../utils/auth')
 
 
-router.post("/signup", withAuth, async (req, res) => {
+router.post("/signup", async (req, res) => {
   try {
     const dbUserData = await User.create({
       username: req.body.username,
@@ -22,7 +22,7 @@ router.post("/signup", withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
-router.post("/login", withAuth, async (req, res) => {
+router.post("/login", async (req, res) => {
   try {
     console.log(req.body);
     const userData = await User.findOne({ where: { email: req.body.email } });

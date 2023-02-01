@@ -19,8 +19,14 @@ router.get("/login", async (req, res) => {
 
 router.get("/dashboard", async (req, res) => {
   try {
-    res.render("dash-main", {logged_in: req.session.logged_in});
+    const newPostData = await Post.findAll();
 
+    const posts = newPostData.map((post) => post.get({ plain: true }));
+    res.render("dashboard", {
+      posts,
+      logged_in: req.session.logged_in,
+      user_id: req.session.user_id,
+    });
   } catch (err) {
     res.status(500).json(err);
   }

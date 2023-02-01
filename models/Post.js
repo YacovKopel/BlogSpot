@@ -20,9 +20,9 @@ Post.init(
       allowNull: false,
     },
     date_created: {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
       allowNull: false,
-      defaultValue: DataTypes.NOW,
+      defaultValue: Date.now(),
     },
     user_id: {
       type: DataTypes.INTEGER,

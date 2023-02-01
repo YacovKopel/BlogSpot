@@ -1,11 +1,11 @@
 const router = require('express').Router();
-const { Post } = require('../../models');
+const { Post, User } = require('../../models');
+const withAuth = require('../../utils/auth');
 
-router.post('/', async (req, res) => {
+router.post('/',withAuth, async (req, res) => {
   try {
     const newProject = await Post.create({
       ...req.body,
-      date_created: Date.toLocaleDateString(),
       user_id: req.session.user_id,
     });
 
